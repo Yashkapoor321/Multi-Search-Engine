@@ -1,27 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Gemini</title>
 </head>
+
 <body>
-    <img src="gemini image.PNG" alt="Gemini Image">
     <main>
-        <div class="display-msg">
-            <div class="hello">Hello, </div>
-             <h3>How can I help you today?</h3>
+        <div class="head">
+            <h1>Hello</h1>
+            <h1>How can I help you today?</h1>
         </div>
 
 
         <div class="search-input">
             <input type="text" placeholder="Enter Your Prompt here" class="user-input">
-            <span class="material-symbols-outlined"> add_photo_alternate  </span>              
+            <button class="btn">Search</button>
+            <span class="material-symbols-outlined"> add_photo_alternate </span>
             <span class="material-symbols-outlined">mic</span>
         </div>
+        <div class="output-container">
+          <div class="user-msg"></div>
+          <div class="bot-msg"></div>
+        </div>
     </main>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+        const API_KEY = "AIzaSyBdVWvw_k08e2AtYpygYyv1y2aJX1w91yU";
+
+        document.querySelector(".btn").addEventListener("click", run);
+        // Access your API key (see "Set up your API key" above)
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        async function run() {
+            // For text-only input, use the gemini-pro model
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+            let userInput = document.querySelector(".user-input").value;
+            let userMessageDisplay = document.createElement("div");
+            userMessageDisplay.className = "user-msg"
+            userMessageDisplay.textContent =`user : ${userInput}`;
+            document.querySelector(".output-container").appendChild(userMessageDisplay);
+
+            const prompt = userInput;
+
+            const result = await model.generateContent(prompt);
+            const response = await result.response;
+            const text = response.text();
+            console.log(text);
+
+            let message = document.createElement("div");
+            message.className = "bot-msg";
+            message.textContent = `Gemini :- ${text}`;
+                                           
+            document.querySelector(".output-container").appendChild(message);
+
+        }
+
+       
+
+    </script>
+
 </body>
+
 </html>
