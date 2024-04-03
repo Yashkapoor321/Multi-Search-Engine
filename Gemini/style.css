@@ -101,8 +101,5 @@ h2{
 .bot-msg{
     font-size: 18px;
     font-weight: 400;
-    p {
-        white-space: pre;
-      }
-      padding-bottom: 5rem;
+    
 }

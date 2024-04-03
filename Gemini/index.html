@@ -4,32 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Gemini</title>
 </head>
 
 <body>
-    <main>
+    
+        <center>
+        <img src="Capture2.PNG" alt="Gemini image" style="width: 300px; height: 100px; margin: 2rem 0rem;">
+        </center>
+        <div class="container">
         <div class="head">
-            <h1>Hello</h1>
-            <h1>How can I help you today?</h1>
+            <h1>Hello,</h1>
+            <h2>How can I help you today?</h2>
         </div>
-
-
+         
+        
+      
         <div class="search-input">
             <input type="text" placeholder="Enter Your Prompt here" class="user-input">
-            <button class="btn">Search</button>
+            
             <span class="material-symbols-outlined"> add_photo_alternate </span>
             <span class="material-symbols-outlined">mic</span>
+            
         </div>
-        <div class="output-container">
-          <div class="user-msg"></div>
-          <div class="bot-msg"></div>
-        </div>
-    </main>
+        <div class="center">
+        <button class="btn">Search</button>
+    </div>
 
+        <div class="search_button">
+            <a href="https://yashkapoor321.github.io/Multi-Search-Engine/">Google</a>
+            <a href=".Wikipedia/index.html">Wikipedia</a>
+        </div>
+         
+        <div class="container1">
+        <div class="output-container">
+            <div class="user-msg"> </div>
+            <div class="bot-msg"></div>
+          </div>  
+        </div>
+</div>
     <script type="importmap">
         {
           "imports": {
@@ -52,7 +68,7 @@
             let userInput = document.querySelector(".user-input").value;
             let userMessageDisplay = document.createElement("div");
             userMessageDisplay.className = "user-msg"
-            userMessageDisplay.textContent =`user : ${userInput}`;
+            userMessageDisplay.textContent = `User  :--  ${userInput}`;
             document.querySelector(".output-container").appendChild(userMessageDisplay);
 
             const prompt = userInput;
