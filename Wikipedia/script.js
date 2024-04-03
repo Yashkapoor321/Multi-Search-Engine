@@ -1,30 +1,55 @@
-let serach = document.querySelector(".search");
-let searchBtn = document.querySelector(".searchBtn");
-let displayResult = document.querySelector(".displayResult");
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.search-box');
+    const input = form.querySelector('input[type="search"]');
+    const resultsContainer = document.querySelector('.results');
+    const searchBtn =  document.querySelector('.searchBtn');
 
-console.log("hello");
-searchBtn.addEventListener("click",fetchData);
+    searchBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const searchTerm = input.value;
+        if (searchTerm) {
+            searchWikipedia(searchTerm);
+        }
+    });
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const searchTerm = input.value;
+            if (searchTerm) {
+                searchWikipedia(searchTerm);
+            }
+});
 
-async function fetchData(){
-    try{
-        let response = await fetch("https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=500&srsearch=${encodeURIComponent(searchTerm)}")
-        let data = await response.json();
-        console.log(data);
-        displayResult.innerHTML = "";
-        
-        let userInput = document.querySelector(".user-input").value;
-        let userMessageDisplay = document.createElement("div");
-        userMessageDisplay.className = "user-msg"
-        userMessageDisplay.textContent =`user : ${userInput}`;
-        document.querySelector(".displayResult").appendChild(userMessageDisplay);
+function searchWikipedia(searchTerm) {
+    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=500&srsearch=${encodeURIComponent(searchTerm)}`;
 
-        let message = document.createElement("div");
-        message.className = "bot-msg";
-        message.textContent = `Wikipedia :- ${data}`;
-                                       
-        document.querySelector(".displayResult").appendChild(message);
-
-    }catch(err){
-        console.log(err);
-    }
+    fetch(url).then(response => response.json()).then     
+        (data => {
+            displayResults(data.query.search);
+        }).catch(error => alert('Error : ' + error));      
 }
+function displayResults(results) {
+    resultsContainer.innerHTML = '';
+    results.forEach(result => {
+        const resultElement = document.createElement('div');
+        resultElement.className = 'result';
+        resultElement.innerHTML = `
+            <h3>${result.title}</h3>
+            <p>${result.snippet}</p>
+            <a href="https://en.wikipedia.org/?curid=${result.pageid}" target="_blank">Read More</a>
+        `;
+        resultsContainer.appendChild(resultElement);
+    });
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
