@@ -1,6 +1,6 @@
 # Multi-Search-Engine
 
-This project aims to create a versatile search platform that combines the power of Google, Gemini, and Wikipedia APIs. It provides users with a seamless experience, allowing them to explore search results from various sources within a single interface. The application is built using HTML, CSS, and JavaScript.
+This project aims to create a versatile search platform that combines the power of Google, Gemini, and Wikipedia APIs. It provides users with a seamless experience, allowing them to explore search results from various sources within a interface. The application is built by using HTML, CSS, and JavaScript.
 
 ## How it Works
 
@@ -22,7 +22,7 @@ Multi Search Engine:  [here](https://yashkapoor321.github.io/Multi-Search-Engine
 
 - # Special Thanks to Mentor Tejal Mohod
 
-I would like to extend my heartfelt gratitude to my mentor, Tejal Mohod, for being the guiding force behind the successful completion of my project.
+I would like to extend my gratitude to my mentor, Tejal Mohod, for being the guiding force behind the successful completion of my project.
 
 
 ## Contributing
