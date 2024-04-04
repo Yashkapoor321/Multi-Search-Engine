@@ -5,14 +5,12 @@
 }
 
 .head{
-    margin: 0rem 20rem;
-    padding: 0  4rem;
-    /* border: 1px solid red; */
-   display: flex;
-   align-items: flex-start;
-   flex-direction: column;
-   width: 50%;
-   line-height: 3rem;
+    
+    width: 45vw;
+    padding: 16px;
+    margin:  10px auto;
+    /* background-color: cyan; */
+    /* border-radius: 15px; */
 }
 h1{
     color: rgb(200, 20, 230);
@@ -82,24 +80,26 @@ h2{
       text-align: center;
   }
 
-  .container1{
-    margin-top: 20px;
-    margin-left: 22rem;
-    display: flex; 
-    /* border: 1px solid red; */
-    height: auto;
-    overflow: hidden;
-    width: 600px;
+  .output-container{
+    width: 60vw;
+    padding: 16px;
+    margin:  10px auto;
+    background-color: cyan;
+    border-radius: 15px;
     
   }
 
 .user-msg{
-    font-size: 20px;
-    margin-bottom: 8px;
-    font-weight: bold;
+    padding: 16px;
+    margin: 2rem 0;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    font-weight: bolder;
 }
 .bot-msg{
-    font-size: 18px;
-    font-weight: 400;
+    padding: 16px;
+    margin: 0.5rem 0;
+    background-color: #FFFFFF;
+    border-radius: 15px;
     
 }
