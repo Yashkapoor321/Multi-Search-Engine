@@ -13,7 +13,7 @@ The Multi-Search-Engine application features a search bar where users can enter 
 * JavaScript: Enables interactivity and dynamic functionalities within the web page, such as handling user input and fetching data from APIs.
 
 ### Multi Search Engine images
-![Alt text](<Capture1.png>) ![Alt text](<Capture2.png>) ![Alt text](<Capture3.png>)
+![Alt text](<Capture1.PNG>) ![Alt text](<Capture2.PNG>) ![Alt text](<Capture3.PNG>)
 
 
 ## Hosted Link
