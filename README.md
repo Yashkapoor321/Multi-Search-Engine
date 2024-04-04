@@ -12,15 +12,17 @@ The Multi-Search-Engine application features a search bar where users can enter 
 * CSS: Styles the visual appearance of the web page.
 * JavaScript: Enables interactivity and dynamic functionalities within the web page, such as handling user input and fetching data from APIs.
 
-**Here's a visual representation of the workflow:**
-![Multi-Search-Engine Workflow](Capture1.png)
-![Multi-Search-Engine Workflow](Capture2.png)
-![Multi-Search-Engine Workflow](Capture3.png)
+### Multi Search Engine images
+![Alt text](<Capture1.png>) ![Alt text](<Capture2.png>) ![Alt text](<Capture3.png>)
 
-## Setup Instructions
 
-1. Clone the repository:
-git clone [here](https://yashkapoor321.github.io/Multi-Search-Engine/)
+## Hosted Link
+
+Multi Search Engine:  [here](https://yashkapoor321.github.io/Multi-Search-Engine/)
+
+- # Special Thanks to Mentor Tejal Mohod
+
+I would like to extend my heartfelt gratitude to my mentor, Tejal Mohod, for being the guiding force behind the successful completion of my project.
 
 
 ## Contributing
