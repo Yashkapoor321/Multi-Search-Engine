@@ -82,6 +82,30 @@
     border-radius: 15px;
   }
 
+  /* Android Smartphone */
+@media only screen and (max-width: 768px) {
+    .search-box {
+        width: 90vw;
+        max-width: none;
+    }
+}
+
+/* Apple iPhone */
+@media only screen and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .search-box {
+        width: 90vw;
+        max-width: none;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .search-box {
+        width: 70vw;
+        max-width: none;
+    }
+}
+
  
 
 
